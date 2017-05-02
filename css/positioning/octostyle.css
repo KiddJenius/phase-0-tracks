@@ -1,5 +1,12 @@
 .octopus {
 	position: absolute;
 	text-align: center;
-	padding: 150px 0;
+	padding: 110px 15px;
+	z-index: -2;
+}
+
+.hat {
+	position: absolute;
+	text-align: center;
+	padding: 10px 0;
 }
