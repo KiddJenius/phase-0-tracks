@@ -12,3 +12,6 @@
 .talents{
 	font-size: .8em;
 }
+#contact-info:hover {
+    color: #FF00FF;
+}
