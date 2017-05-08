@@ -1,0 +1,31 @@
+ROBOT IN AN ELEVATOR
+
+[Continue to face forward until otherwise instructed.]
+-(n) “steps” command
+			-until n steps
+			-left foot forward 1.5 feet, -1n steps
+			-right foot forward 1.5 feet -1n steps
+-“out of elevator” = “steps” n=5
+
+
+-forward is facing the closed door.
+-Proceed into elevator
+	-run “steps” command 
+		-n=“continuous” until wall is reached
+-About face 180 degrees.
+-Import data about numeric pad located on front right wall, store number values as “floors”
+-locate pad button that corresponds to the number 24 save as “Apt button”
+	-deploy arm
+	-extend in direction of #apt button until [20mz] resistance is met
+	-retract arm 
+-If lighted, input as “floor on”
+-In “floors” when “floor on” = “Apt Button”
+	-verbal command “Excuse me”
+	-1 second pause
+	-run “out of elevator”
+		
+-Activate arrival device
+
+
+
+
