@@ -7,24 +7,42 @@ ROBOT IN AN ELEVATOR
 			-right foot forward 1.5 feet -1n steps
 -“out of elevator” = “steps” n=5
 
-
--forward is facing the closed door.
--Proceed into elevator
-	-run “steps” command 
-		-n=“continuous” until wall is reached
--About face 180 degrees.
--Import data about numeric pad located on front right wall, store number values as “floors”
--locate pad button that corresponds to the number 24 save as “Apt button”
-	-deploy arm
-	-extend in direction of #apt button until [20mz] resistance is met
-	-retract arm 
--If lighted, input as “floor on”
--In “floors” when “floor on” = “Apt Button”
-	-verbal command “Excuse me”
-	-1 second pause
-	-run “out of elevator”
+——————————————————————————————————
+1. forward is facing the closed door.
+2. Proceed into elevator
+	2.1 run “steps” command 
+		2.1.1 n=“continuous” until wall is reached
+3. About face 180 degrees.
+4. Import data about numeric pad located on front right wall, store number values as “floors”
+5. locate pad button that corresponds to the number 24 save as “Apt button”
+	5.1 deploy arm
+	5.2 extend in direction of #apt button until [20mz] resistance is met
+	5.3 retract arm 
+6. If lighted, input as “floor on” in “floors”
+7. In “floors” when “floor on” = “Apt Button”
+	7.1 verbal command “Excuse me”
+	7.2 1 second pause
+	7.3 run “out of elevator”
 		
--Activate arrival device
+8. Activate arrival device
+
+HOW TO DRAW A FLOWER
+
+1. Pencil circle in top half of page 
+	1.1 circle radius = 20% entire page area
+		1.1.1 page area = L x W x H
+2. Draw line out 2 inches from radius (original leaf)
+	2.1 move over .5 inch 
+	2.2 draw line out 2 inches
+	2.3 move over 1/8 of circle
+	2.4 repeat 2.2 until back at original leaf
+3. Put semi-circle covering over every opening at end of line
+4. From bottom leaf draw “stem” with length of 30% of “page area”
+5. Draw leaf on “stem” at .5 inch on the right side
+	5.1 move down .5 inch
+	5.2 draw leaf
+	5.3 if bottom, switch to corresponding left side
+	5.4 draw leaf until top
 
 
 
