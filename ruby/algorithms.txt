@@ -31,11 +31,11 @@ HOW TO DRAW A FLOWER
 1. Pencil circle in top half of page 
 	1.1 circle radius = 20% entire page area
 		1.1.1 page area = L x W x H
-2. Draw line out 2 inches from radius (original leaf)
+2. Draw line out 2 inches from radius (original petal)
 	2.1 move over .5 inch 
 	2.2 draw line out 2 inches
 	2.3 move over 1/8 of circle
-	2.4 repeat 2.2 until back at original leaf
+	2.4 repeat 2.2 until back at (original petal)
 3. Put semi-circle covering over every opening at end of line
 4. From bottom leaf draw “stem” with length of 30% of “page area”
 5. Draw leaf on “stem” at .5 inch on the right side
