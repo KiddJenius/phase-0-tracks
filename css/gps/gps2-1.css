@@ -47,7 +47,7 @@ article {
 
 }
 article:hover {
-	background-color: yellow;
+	color: yellow;
 }
 article:nth-child(odd){
 	background-image: url(http://wallpapercave.com/wp/BhcQpIw.jpg);
