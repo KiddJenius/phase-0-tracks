@@ -59,7 +59,7 @@ until candidates == 0
   puts "#{candidates} left to process."
 end
 
-
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
 
 
