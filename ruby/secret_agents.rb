@@ -1,3 +1,4 @@
+#to avoid and edge case, we replaced "z"'s with "a"'s then added +1
 def encrypt(str) 
 	counter = 0
 	while counter < str.length
@@ -10,10 +11,9 @@ def encrypt(str)
 		end
 	end
 	puts str
-	return str
 end
 
-
+#set entire alphabet to a string for reference
 def decrypt(str)
 	alphabet = "abcdefghijklmnopqrstuvwxyz"
 	counter = 0
@@ -25,15 +25,10 @@ def decrypt(str)
 	return str
 end
 
-#decrypt(encrypt("swordfish")) will return swordfish becasue encrypt inside the () runs moving each letter +1, then decrypt puts them back...returns swordfish
-
-#get encrypt/decrypt from user
-#ask them for a password
-#if user encrypt, runs encrypt function; if decrypt run through decrypt function
-
-def pswd_function()
+#loop until one of two choices is given
+def pswd_function
 	puts "Would you like to encrypt or decrypt?"
-	answer = gets.chomp.downcase
+		answer = gets.chomp.downcase
 	while answer != "encrypt" && answer != "decrypt"
 		puts "Please enter either 'encrypt' or 'decrypt'"
 		answer = gets.chomp
