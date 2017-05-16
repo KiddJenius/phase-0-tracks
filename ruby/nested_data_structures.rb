@@ -12,7 +12,7 @@ universe = {
 }
 
 p universe['galaxy'] = solar_system['planet']
-#a hash inside an array inside a hash.  Returns "earth"
+#a hash inside an array inside a hash.  Returns "earth".
 
 p universe ['empty_space'][1]
-# an array inside a hash returning index 1
+# an array inside a hash returning index 1("vacuum").
