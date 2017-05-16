@@ -49,27 +49,26 @@ else
 	puts "What would you like it to be?"
 	newvalue = gets.chomp
 end	
-
-if keychange == "name"
+case keychange
+when "name"
 	design_qaire[:name] = newvalue
-elsif keychange == "age"
-	design_qaire[:age] = newvalue
-elsif keychange == "numOfChildren"
+when "age"
+	design_qaire[:age] = newvalue.to_i
+when "numOfChildren"
 	design_qaire[:numOfChildren] = newvalue
-elsif keychange == "income"
-	design_qaire[:income] = newvalue
-elsif keychange == "woodType"
+when "income"
+	design_qaire[:income] = newvalue.to_i
+when "woodType"
 	design_qaire[:woodType] = newvalue
-elsif keychange == "artistType"
+when "artistType"
 	design_qaire[:artistType] = newvalue
-elsif keychange == "carpet"
+when "carpet"
 	design_qaire[:carpet] = newvalue
 else
-	puts "That's not an answer!"
+	nil
 end
 
 puts design_qaire
-
 
 
 
