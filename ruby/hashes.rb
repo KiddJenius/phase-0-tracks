@@ -39,4 +39,41 @@ design_qaire = {
 
 puts design_qaire
 
-puts "Would you like to update any of these answers?"
+puts "Would you like to change any of your aswers? (If no changes put 'none')"
+update = gets.chomp
+if update == "none"
+	puts "Great!"
+else
+	puts "Type the key you would like to change"
+	keychange = gets.chomp
+	puts "What would you like it to be?"
+	newvalue = gets.chomp
+end	
+
+if keychange == "name"
+	design_qaire[:name] = newvalue
+elsif keychange == "age"
+	design_qaire[:age] = newvalue
+elsif keychange == "numOfChildren"
+	design_qaire[:numOfChildren] = newvalue
+elsif keychange == "income"
+	design_qaire[:income] = newvalue
+elsif keychange == "woodType"
+	design_qaire[:woodType] = newvalue
+elsif keychange == "artistType"
+	design_qaire[:artistType] = newvalue
+elsif keychange == "carpet"
+	design_qaire[:carpet] = newvalue
+else
+	puts "That's not an answer!"
+end
+
+puts design_qaire
+
+
+
+
+
+
+
+
