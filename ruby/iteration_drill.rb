@@ -15,12 +15,33 @@ zombie_apocalypse_supplies.each { |a| print a + "*"}
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
 # For instance: are boots in your list of supplies?
 # ----
-
+puts "Check item in the bag?"
+user_input = gets.chomp
+if user_input == zombie_apocalypse_supplies[0]
+  puts "in the bag"
+elsif user_input == zombie_apocalypse_supplies[1]
+  puts "in the bag"
+elsif user_input == zombie_apocalypse_supplies[2]
+  puts "in the bag"
+elsif user_input == zombie_apocalypse_supplies[3]
+  puts "in the bag"
+elsif user_input == zombie_apocalypse_supplies[4]
+  puts "in the bag"
+elsif user_input == zombie_apocalypse_supplies[5]
+  puts "in the bag"
+elsif user_input == zombie_apocalypse_supplies[6]
+  puts "in the bag"
+elsif user_input == zombie_apocalypse_supplies[7]
+  puts "in the bag"
+else 
+  puts "not in the bag"
+end
 # 4. You can't carry too many things, you've only got room in your pack for 5.
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
 # leaving only 5. Do not use any special built-in methods.
 # ----
-
+light_bag = zombie_apocalypse_supplies [1..5] 
+puts light_bag
 # 5. You found another survivor! This means you can combine your supplies.
 # Create a new combined supplies list out of your zombie_apocalypse_supplies
 # and their supplies below. You should get rid of any duplicate items.
@@ -29,7 +50,8 @@ zombie_apocalypse_supplies.each { |a| print a + "*"}
 other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
                             "solar battery", "flashlight"]
 # ----
-
+new_array = zombie_apocalypse_supplies + other_survivor_supplies
+new_array.uniq
 # Hash Drills
 
 extinct_animals = {
