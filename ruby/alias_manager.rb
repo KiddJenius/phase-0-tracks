@@ -1,15 +1,22 @@
-# assign spy: Jonathan Pollard
-spy_name = "Jonathan Pollard"
-#split name into array of items
-spy_name =spy_name.split(' ')
-#reverse order of array items
-spy_name.reverse!
-#return swapped name as string
-newname = spy_name.join(' ')
-#split swapped name into array as individual letters
-swap_arry = newname.split('')
-#change all vowel items to next vowel in series
-swap_arry.each do |indivLetter| 
+letters = "hello world".split('')
+letters.class
+letters.map! { |letter| letter.next }
+letters
+new_string = letters.join('')
+
+puts "Name please:"
+user_input = gets.chomp
+#method swaps name and downcase to string 
+def rearranger(str)
+str = str.split(' ')
+final = str.reverse.join(' ')
+final = final.downcase
+end
+swapped_name = rearranger(user_input)
+
+def next_vowel(name)
+  name = name.split('')
+  name.each do |indivLetter| 
   if indivLetter == "a"
     indivLetter.replace("e")
   elsif indivLetter == "e"
@@ -22,19 +29,33 @@ swap_arry.each do |indivLetter|
     indivLetter.replace("a")
   end
 end
-
-#for every letter that's not "aeiou":
-swap_arry.each do |char|
-  if char != "a" && char != "e" && char != "i" && char != "o" && char != "u"
-     char.next!
-  end
-end
-#change exclimation points to spaces
-swap_arry.each do |point|
-  if point == ("!")
-    point.replace(" ")
-  end
 end
 
-final_string = swap_arry.join('')
-puts final_string
+#runs next vowel and stores as array all downcase
+vowel_changed_array = next_vowel(swapped_name)
+#changes array name to one string
+vowel_string = vowel_changed_array.join('')
+
+vowel_string.class
+
+def next_consonant(product)
+  spot = 0 
+  consonants = "bcdfghjklmnpqrstvwxyz"
+  while spot <= (product.length - 1)
+  if product[spot] == "z"
+    product[spot] = "b"
+  elsif consonants.split('').include?(product[spot])
+    next_spot = consonants.index(product[spot]) + 1 
+    product[spot] = consonants[next_spot]
+  end
+  spot += 1 
+end
+product
+end
+
+next_consonant(vowel_string)
+#capitalizes all letters in front of spaces
+stored_name = vowel_string.split.map(&:capitalize).join(' ')
+puts stored_name
+
+
