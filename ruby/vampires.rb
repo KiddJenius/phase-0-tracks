@@ -12,7 +12,7 @@ def survey
   puts "In what year were you born?"
     birthyear = gets.chomp.to_i
 
-# There's probably a better way to auto update the current year.  This if/elsif block references several areas in the program to see if age and given birthyear line up
+#uses current year 
   current_year = Time.new.year
   if current_year - birthyear == given_age
     puts "That math checks out."
