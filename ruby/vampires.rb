@@ -30,7 +30,7 @@ def survey
   wants_ins = health_ins == "yes"
 
 # After general questions the program loops until "none" or "done" end the loop
-  puts "List any alergies you have.  If none put 'none'.  Put 'done' when done."
+  puts "List any alergies you have. Put 'done' when done."
   alergies = gets.chomp.downcase
   until alergies == "done" || alergies == "sunshine"
       puts "Any more?"
