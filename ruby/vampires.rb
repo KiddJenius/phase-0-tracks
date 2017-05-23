@@ -12,7 +12,7 @@ def survey
   puts "In what year were you born?"
     birthyear = gets.chomp.to_i
 
-#uses current year 
+# uses current year 
   current_year = Time.new.year
   if current_year - birthyear == given_age
     puts "That math checks out."
