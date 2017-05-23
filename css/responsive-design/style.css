@@ -1,3 +1,6 @@
+/*
+* { outline: 1px solid red; }
+*/
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -9,9 +12,13 @@ cite {
   margin-top: 10px;
 }
 
-#external-links ul {
+#external-links {
   list-style-type: none;
   padding-left: 0px;
+  width: 20%; 
+  display: inline-block;
+  vertical-align: top;
+  min-width: 150px; 
 }
 
 /* you're welcome to edit the
@@ -30,3 +37,30 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+body { 
+  max-width: 960px;
+}
+main {
+  width: 756px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 500px) {
+  blockquote {
+    font-family: "Times New Roman", Georgia, Serif;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  ol {
+    color: darkgreen;
+  }
+
+}
+
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
