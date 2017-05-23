@@ -23,15 +23,17 @@ def survey
   else
     puts "Hmmm, the math on that doesn't seem right."
   end
-
+  truth_age = given_age == current_year - birthyear
+  
   puts "Our cafeteria serves garlic bread, should we get you some, yes or no?"
   bread = gets.chomp.downcase
 
-  likes_garlic = bread == "y"
+  likes_garlic = bread == "yes"
+
 
   puts "Are you going to enroll in our health insurance, yes or no?"
   health_ins = gets.chomp.downcase
-  wants_ins = health_ins == "y"
+  wants_ins = health_ins == "yes"
 
 # After general questions the program loops until "none" or "done" end the loop
   puts "List any alergies you have.  If none put 'none'.  Put 'done' when done."
@@ -61,27 +63,23 @@ def survey
 
   end
 
-# basically defines the truth
-    if current_year - birthyear == given_age
-      testimony = true
-    else 
-      testimony = false
-    end
-
 # if/elsif block to make a reco on the likelyhood of vampire status
 
   
-  if testimony == true && (bread == "yes" || health_ins == "yes")
+  if truth_age && (likes_garlic || wants_ins)
     result = "Probably not a vampire."
   end
-  if testimony == false && (bread == "no" && health_ins == "yes") || (bread == "yes" && health_ins == "no") || alergies == "sunshine"
-    result = "Probably a vampire"
+  if !truth_age && (likes_garlic && !wants_ins) || (!likes_garlic && wants_ins) 
+  result = "Probably a vampire"
   end
-  if testimony == false && bread == "no" && health_ins == "no"
+  if !truth_age && !likes_garlic && !wants_ins
     result = "Almost certainly a vampire"
   end
   if name == "drake cula" || name == "tu fang"
     result = "Definately a vampire."
+  end
+  if alergies == "sunshine"
+    result = "Probably a vampire"
   end
   if result == nil
     puts "Results inconclusive"
@@ -110,6 +108,5 @@ until candidates == 0
   candidates= candidates - 1
   puts "#{candidates} left to process."
 end
-
 
 
