@@ -8,8 +8,8 @@ class Santa
   end
     
   def speak
-    puts "Ho, ho, ho! Happy holidays! I am a #{@ethnicity} #{@gender}"
-  end
+    puts "Ho, ho, ho! Happy holidays! I am a #{@gender} #{@ethnicity}!"
+   end
   
   def eat_milk_and_cookies(type)
     puts "That was a good #{type} treat."
@@ -17,29 +17,42 @@ class Santa
   
   def get_mad_at (reindeer_name)
     reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+    p reindeer_ranking
     reindeer_ranking.delete(reindeer_name)
     reindeer_ranking.push(reindeer_name)
+    puts "#{reindeer_name} to the back!!"
+    puts reindeer_ranking
   end
   
   def celebrate_birthday(age)
-    age += 1 
-    puts age
+    age = rand(140)
+    puts "I'm #{age} years old!!"
   end
-  
 end
 
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
 example_genders.length.times do |i|
   santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
 
-age =90
-santa = Santa.new("guy", "Nordic") 
+santa = Santa.new("Nordic", "Guy")
 santa.speak
 santa.get_mad_at("Vixen")
-santa.celebrate_birthday(80)
-santa.gender = "doll"
-puts santa.speak
-puts santas[4, 5]
+
+age = 0 
+santas.each do |x|
+  x.speak
+  x.celebrate_birthday(age)
+  x.eat_milk_and_cookies("oatmeal")
+end
+
+
+
+
+
+
+
+ 
