@@ -4,6 +4,5 @@ class Puppy
     puts "I brought back the #{toy}!"
     toy
   end
-
 end
 
