@@ -4,7 +4,11 @@ start with the highest index number and list the remaining numbers by index larg
 store and print the result */
 
 var anchor = "unicorn"
+var newWord = ""
 for (var i = anchor.length - 1; i >= 0; i--){
-  console.log(anchor[i]);
+	console.log(anchor[i])
+  newWord += anchor[i] 
 }
+
+console.log (newWord)
 
