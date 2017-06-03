@@ -37,15 +37,15 @@ def next_consonant(product)
   spot = 0 
   consonants = "bcdfghjklmnpqrstvwxyz"
   while spot < (product.length)
-  if product[spot] == "z"
-    product[spot] = "b"
-  elsif consonants.split('').include?(product[spot])
-    next_spot = consonants.index(product[spot]) + 1 
-    product[spot] = consonants[next_spot]
+    if product[spot] == "z"
+      product[spot] = "b"
+    elsif consonants.split('').include?(product[spot])
+      next_spot = consonants.index(product[spot]) + 1 
+      product[spot] = consonants[next_spot]
+    end
+    spot += 1 
   end
-  spot += 1 
-end
-product
+  product
 end
 next_consonant(vowel_string)
 
