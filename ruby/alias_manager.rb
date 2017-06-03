@@ -13,16 +13,17 @@ swapped_name = rearranger(user_input)
 def next_vowel(name)
   name = name.split('')
   name.each do |indivLetter| 
-  if indivLetter == "a"
-    indivLetter.replace("e")
-  elsif indivLetter == "e"
-    indivLetter.replace("i")
+    if indivLetter == "a"
+      indivLetter.replace("e")
+    elsif indivLetter == "e"
+      indivLetter.replace("i")
   elsif indivLetter == "i"
-    indivLetter.replace("o")
+      indivLetter.replace("o")
   elsif indivLetter == "o"
-    indivLetter.replace("u")
+      indivLetter.replace("u")
   elsif indivLetter == "u"
-    indivLetter.replace("a")
+      indivLetter.replace("a")
+    end
   end
 end
 
