@@ -25,7 +25,7 @@ def next_vowel(name)
     indivLetter.replace("a")
   end
 end
-end
+
 
 #runs next vowel and stores as array
 vowel_changed_array = next_vowel(swapped_name)
