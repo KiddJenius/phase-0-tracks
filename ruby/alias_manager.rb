@@ -37,7 +37,7 @@ vowel_string = vowel_changed_array.join('')
 def next_consonant(product)
   spot = 0 
   consonants = "bcdfghjklmnpqrstvwxyz"
-  while spot < (product.length)
+  while spot < product.length
     if product[spot] == "z"
       product[spot] = "b"
     elsif consonants.split('').include?(product[spot])
