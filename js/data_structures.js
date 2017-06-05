@@ -1,7 +1,12 @@
-colors = ["blue", "red", "pink", "purple"]
-names = ["Mr. Ed", "Unbroken", "Barely Here", "Scout"]
+var colors = ["blue", "red", "pink", "purple"];
+var sirname = ["Mr. Ed", "Unbroken", "Barely Here", "Scout"];
 
-colors.push("")
-names.push("")
+colors.push("");
+sirname.push("");
 
-var chart = {names[], colors[]};
+
+//why does this not work???????
+
+var chart = {sirname[0]: colors[0]};
+console.log(chart);
+
