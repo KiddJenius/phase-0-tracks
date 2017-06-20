@@ -21,7 +21,13 @@ puts "Good candidate for adoption?"
 good_for_adopt = gets.chomp
 
 puts "Estimated age?"
-est_age = gets.chomp.to_i
+est_age = gets.chomp
+
+if est_age == ""
+	est_age = nil
+else 
+	est_age.to_i
+end
 
 puts "Latest Hanster Entry: "
 puts "Name: #{hamster_name}"
