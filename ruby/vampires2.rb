@@ -3,14 +3,13 @@ candidates = gets.chomp.to_i
 
 until candidates == 0 
   puts "So.. what's your name?"
-  name = gets.chomp.downcase
+  name = gets.chomp
   
   puts "How old are you?"
   given_age = gets.chomp.to_i 
   
   puts "Ok.  Then what year were you born?"
   given_birthyear = gets.chomp.to_i  
-  
   
   if Time.new.year - given_birthyear == given_age
     puts "That math checks out.  Hi #{name}."
@@ -35,12 +34,19 @@ until candidates == 0
   else 
     needs_ins = false
   end 
+ 
+  puts "Do you have any alergies, #{name}? If none, type 'none'.  Type 'done' when done."
+  alergies = gets.chomp.downcase
+  until alergies == "none" || alergies == "done" || alergies == "sunshine"
+    puts "Any more?"
+    alergies = gets.chomp.downcase
+  end
   
-  if name == "tu fang" || name == "drake cula"
+  if (name.downcase == "tu fang" || name.downcase == "drake cula") && alergies != "sunshine"
     puts "Definately a vampire."
-  elsif honest && likesbread && needs_ins
+  elsif honest && likesbread && needs_ins && alergies != "sunshine"
     puts "Probably not a vampire."
-  elsif !honest && (!likesbread && needs_ins) || (!needs_ins && likesbread)
+  elsif !honest && (!likesbread && needs_ins) || (!needs_ins && likesbread) || alergies == "sunshine"
     puts "Probably a vampire."
   elsif !honest && !likesbread && !needs_ins
     puts "Almost certainly a vampire!"
@@ -48,5 +54,7 @@ until candidates == 0
     puts "Results inconclusive."
   end 
   candidates -= 1
-  puts "#{candidates} left to process"
+  
+  puts "#{candidates} left to process:"
+
 end 
