@@ -31,12 +31,14 @@
 #---------------------------------------------------------------------------------------------
 #1 METHOD ONE: break number into an array
 #2 start at array[-1] and move left until array[0], use counter
+
 #3 METHOD TWO: push array digit in last positon to new array
-#4			       move left one to second to last digit position, double it
-#5             if doubled digit > 10, split and push to new array
-#6             move left one positon and repeat step #3
+#4 move left one to second to last digit position, double it
+#5 if doubled digit > 10, split and push to new array
+#6 move left one positon and repeat step #3
+
 #7 METHOD THREE: add all digits in the new array
-#8                 if mod 10, return true == Valid 
+#8 if mod 10, return true == Valid 
 #---------------------------------------------------------------------------------------------
 
 #Account number to array of individual string numbers 
