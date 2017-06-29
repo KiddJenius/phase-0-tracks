@@ -29,59 +29,48 @@
 # Make sure to pseudocode! These are big steps and they are a bit complicated, so break them down.
 
 #---------------------------------------------------------------------------------------------
-#1 METHOD ONE: break number into an array
-#2 start at array[-1] and move left until array[0], use counter
 
-#3 METHOD TWO: push array digit in last positon to new array
-#4 move left one to second to last digit position, double it
-#5 if doubled digit > 10, split and push to new array
-#6 move left one positon and repeat step #3
+#method that breaks number into an array of individual numbers and starts at the last digit, adds it to an empty array, moves left one digit, doubles it adds it to empty array, moves left until reaches first digit at index 0 | OUTPUT = array of numbers every other doubled 
+#method that splits everything into single digits and adds the total
+#method that checks number of digits is 16 and modulous 10 == 0 and validates 
 
-#7 METHOD THREE: add all digits in the new array
-#8 if mod 10, return true == Valid 
 #---------------------------------------------------------------------------------------------
 
-#Account number to array of individual string numbers 
-def breaker(account_number)
-  account_number.to_s.split('')
-end
 
-#Starts with last number in array and pushes, moves left, doubles, then pushes
-def converter(splitnum)
-  x = splitnum.length
-  new_array = []
+def double_breaker(card_number)
+  split_ary = card_number.split('')
+  split_doubled = []
+  x = split_ary.length 
   until x == 0 
     if x.even?
-      new_array << splitnum[x-1].to_i
+      split_doubled << split_ary[x-1].to_i
     else
-      new_array << splitnum[x-1].to_i * 2
-    end 
-    x -= 1
+      split_doubled << split_ary[x-1].to_i * 2 
+    end
+    x -= 1 
   end
-  new_array
-end
-
-puts "Account number please:"
-account_number = gets.chomp 
-
-#Stores value of original account number as a array into a variable 
-splitnum = breaker(account_number)
-
-#Makes new array of every other number doubled
-converter(splitnum)
-
-#Creates one long number array, eliminating double digit numbers
-split_ary = converter(splitnum).reverse.join.split('')
-
-#Iterates through long number array converting to number and adding each to get a total sum 
-total = ""
-split_ary.each {|num| total = num.to_i + total.to_i}
-
-#Checks to see if original number is 16 digits and modulous 10 
-if account_number.length != 16
-  puts "Incorrect number of digits"
-elsif total%10 == 0 && account_number.length == 16
-  puts "Valid number"
-else
-  puts "INVALID"
+  split_doubled.reverse
 end 
+
+def split_add(second_ary)
+  second_ary = second_ary.join.split('')
+  total = ""
+  second_ary.each  { |num| total = num.to_i + total.to_i }
+  total 
+end 
+
+def check_card(card_number)  
+  if card_number.length != 16
+    puts "Invalid number of digits"
+  elsif
+    split_add(double_breaker(card_number)) % 10 == 0  
+    valid = true
+    puts "Validated"
+  else
+    puts "Invalid"
+    valid = false
+  end
+end 
+
+card_number = "4563960122001999"
+check_card(card_number)
