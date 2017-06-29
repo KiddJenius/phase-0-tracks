@@ -76,5 +76,5 @@ simple_hash.delete_if {|key, value| key != "twenty"}
 p simple_hash
 
 #Remove items until the conditon is false
-final_array=simple_array.drop_while {|i| i < 15} 
+final_array = simple_array.drop_while {|i| i < 15} 
 p final_array
