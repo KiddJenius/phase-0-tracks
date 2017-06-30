@@ -19,11 +19,13 @@ puts "After array iteration:"
   edm_djs.each do |dj| 
     puts "#{dj.upcase}"
 end
+
 p edm_djs
 puts "After array mapping:"
   edm_djs.map! do |dj|
     dj.reverse
   end
+
 p edm_djs
   
 puts "Before the hash iteration:"
@@ -37,11 +39,11 @@ puts "After the hash iteration:"
 simple_array = [5, 10, 15, 20, 25]
 p simple_array
 
-#have to create variable to print; does not change array without (!)bang.
-test1 = simple_array.reject { |a| a<=15 }
-p test1
-test2 = simple_array.select { |a| a%10==0 } 
-p test2
+# does not change array without (!)bang.
+p simple_array.reject { |a| a<=15 }
+p simple_array
+p simple_array.select { |a| a%10==0 } 
+p simple_array
 
 #this will keep all items greater than 5 and change array
 simple_array.keep_if { |a| a > 5 }
