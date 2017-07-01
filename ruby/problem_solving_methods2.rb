@@ -27,3 +27,9 @@ def fib(num)
 end
 
 p fib(100)
+
+#1 begin at the second left most element of array
+#2 if the number to the left is larger, shift larger number one position to the right 
+#3 insert number to left of greater number
+#4 move to third positon and compare against second position, repeat step 2 
+#5 continue until position n-1 
