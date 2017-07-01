@@ -13,3 +13,17 @@ end
 array = [5, 13, 27, 44, 51, 79]
 checker(array, 51)
 
+
+def fib(num)
+    new_ary = [0,1]
+    x = 1
+    num = num - 2 #compensate for having a starting array with 2 digits
+  num.times do |y|
+    y = new_ary[x-1] + new_ary[x] 
+    new_ary << y
+    x += 1 
+  end 
+  p new_ary
+end
+
+p fib(100)
