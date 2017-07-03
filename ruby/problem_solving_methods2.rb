@@ -28,6 +28,7 @@ end
 
 p fib(100)
 
+#INSERTION SORT
 #1 begin at the second left most element of array
 #2 if the number to the left is larger, shift larger number one position to the right 
 #3 insert number to left of greater number
