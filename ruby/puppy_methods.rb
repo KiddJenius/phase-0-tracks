@@ -59,7 +59,7 @@ weather_options = []
   x = Weather.new 
   weather_options << x 
 end 
-p weather_options
+
 
 weather_options.each do |y|
   y.wind
