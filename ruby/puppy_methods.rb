@@ -60,7 +60,6 @@ weather_options = []
   weather_options << x 
 end 
 
-
 weather_options.each do |y|
   y.wind
   y.fog
