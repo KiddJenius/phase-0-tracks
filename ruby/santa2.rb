@@ -21,7 +21,7 @@ class Santa
 	end
 
 	def celebrate_birthday
-	  @age = rand(140)
+		@age = rand(140)
 		@age += 1
 		puts "Next year I will be #{@age} years old!!"
 	end
