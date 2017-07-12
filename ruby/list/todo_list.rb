@@ -20,6 +20,10 @@ class TodoList
 	def get_item(index)
 		@list[index]
 	end
+
+	def get_item(item)
+		item = @list[0]
+	end
 end
 
 
