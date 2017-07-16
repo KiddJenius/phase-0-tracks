@@ -1,6 +1,7 @@
 require_relative '2hangman'
 
 describe Hangman do 
+	let(:anchor) {"unicorn"}
 	let(:game) { Hangman.new(anchor) }
 	
 	it "adds two integers" do
