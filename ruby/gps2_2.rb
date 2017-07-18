@@ -1,65 +1,84 @@
-#Create a new list
-#Add an item with a quantity to the list
-#Remove an item from the list
-#Update quantities for items in your list
-#Print the list (Consider how to make it look nice!)
-
 # Method to create a list
-
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps:
-  # take a string
-  # .split(' ') creates array of separated items
-  # create hash for item and quantity
-  # iterate through array and feed items as keys into hash
-  # set default quantity
+  # separate string into array using spaces
+  # initialize empty hash
+  # pass each index of the array as key into the hash
+  # set default quantity as value
   # print the list to the console [can you use one of your other methods here?]
-# output: [what data type goes here, hash]
-def create_list(string_list)
-  array_list = string_list.split(' ')
-  default_quantity = 1
-  hash_list = {}
-  array_list.each {|x|hash_list[x]=default_quantity}
-  return hash_list
+# output: hash of items and quantities
+
+def initial_list(string_of_items)
+  grocery_list = {}
+  quantity = 1
+  items_array = string_of_items.split(" ")
+  items_array.each do |item|
+    grocery_list.store(item, quantity)
+  end
+  grocery_list
 end
-example_list = create_list("carrots apples cereal pizza")
+
+our_list = initial_list("apples oranges carrots stuff")
+
 
 # Method to add an item to a list
 # input: list, item name, and optional quantity
-# steps: input into hash, an item and quantity find method to push item and quantity
-# output: hash with added item
-def add_item(list, item, quantity=1)
-  list[item] = quantity
-  return list
+# steps:
+  #input item into the hash
+  #push key and value
+# output: updated hash
+
+def add_new_items(list, item_name, quantity=1)
+  list[item_name] = quantity
+  list
 end
-p add_item(example_list, "fudge", 3)
+
+add_new_items(our_list, "lemonade", 2)
+add_new_items(our_list, "tomatoes", 3)
+add_new_items(our_list, "onions")
+add_new_items(our_list, "Ice Cream", 4)
+p our_list
 
 # Method to remove an item from the list
-# input: list, item
-# steps: find method to remove a key and it's pair
-# output: hash with item removed
-def remove_item(list, item)
+# input: the list, the item to delete
+# steps:
+  #find and remove key
+# output: updated hash
+
+def delete_item(list, item)
   list.delete(item)
-  return list
+  list
 end
 
-p remove_item(example_list, "fudge")
+delete_item(our_list, "lemonade")
+p our_list
+
 
 # Method to update the quantity of an item
-# input: list, item name, new quantity
-# steps: call list and key and change the quantity value
-# output: hash with updated quantity
-def update_list(list, item, quantity)
-  list[item]=quantity
-  return list
+# input: the list, the item, the new quantity
+# steps:
+  #locate key for item
+  #update value to new quantity
+# output: updated hash
+
+def update_item_quantity(list, item, quantity)
+  list[item] = quantity
+  list
 end
-p update_list(example_list, "carrots", 3)
+
+p update_item_quantity(our_list, "Ice Cream", 1)
+p our_list
 
 # Method to print a list and make it look pretty
-# input: hash
-# steps: iterate and puts each key value pair to print list
-# output: hash
-def print_hash(hash_list)
-  hash_list.each {|item, quantity|puts "#{item}, #{quantity}"}
+# input: the hash
+# steps:
+  #print out each key and value with prettiness
+# output: awesomeness
+
+def beautify_hash(hash)
+  hash.each do |item, quantity|
+    puts "#{item.capitalize}: #{quantity}"
+  end
 end
-print_hash(example_list)
+
+beautify_hash(our_list)
