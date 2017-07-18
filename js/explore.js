@@ -10,7 +10,7 @@ for (var i = baseword.length - 1; i >= 0; i--) {
   }
   return newStr
 }
-var stored = ReverseWord("hello")
+var stored = ReverseWord("unicorn")
 
 if (1==1) {	
 	console.log(stored);
