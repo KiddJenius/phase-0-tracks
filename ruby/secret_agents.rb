@@ -1,54 +1,49 @@
-#to avoid and edge case, we replaced "z"'s with "a"'s then added +1
-def encrypt(str) 
-	counter = 0
-	while counter < str.length
-		if str[counter]=="z"
-			str[counter]="a"
-			counter += 1
-		else
-			str[counter]= str[counter].next
-			counter += 1
-		end
-	end
-	puts str
+
+
+def encrypt(answer)
+  index = 0 
+  until answer.length == index
+    if answer[index] != " " && answer[index] != "z"
+      answer[index] = answer[index].next
+    elsif answer[index] == "z" 
+      answer[index] = "a"
+    else
+      answer[index] = answer[index]
+    end
+    index += 1 
+  end
+  puts "Your password encrypted is \"#{answer}\"!"
 end
 
-#set entire alphabet to a string for reference
-def decrypt(str)
-	alphabet = "abcdefghijklmnopqrstuvwxyz"
-	counter = 0
-	while counter < str.length
-		str[counter]= alphabet[alphabet.index(str[counter])-1]
-		counter +=1
-	end
-	puts str
-	return str
-end
+def decrypt(answer)
+  index = 0 
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+  until answer.length == index
+    if answer[index] != " " && answer[index] != "a"
+      answer[index] = alphabet[alphabet.index(answer[index])-1]
+    elsif answer[index] == "a"
+      answer[index] = "z"
+    else
+      answer[index] = answer[index]
+    end
+    index += 1 
+  end
+  puts "Your password decrypted is \"#{answer}\"!"
+end 
 
-#loop until one of two choices is given
-def pswd_function
-	puts "Would you like to encrypt or decrypt?"
-		answer = gets.chomp.downcase
-	while answer != "encrypt" && answer != "decrypt"
-		puts "Please enter either 'encrypt' or 'decrypt'"
-		answer = gets.chomp
-	end
-	puts "What is the password"
-	password = gets.chomp
-	if answer == "encrypt"
-		encrypt(password)
-	else 
-		decrypt(password)
-	end
-end
+#Driver Code 
 
-pswd_function()
+puts "Would you like to encrypt or decrypt?"
+choice = gets.chomp 
 
-
-
-
-
-
-
-
-
+if choice != "encrypt" && choice != "decrypt"
+  puts "Not a choice, dude.."
+else 
+  puts "What password would you like to #{choice}?"
+  answer = gets.chomp 
+  if choice == "encrypt"
+    encrypt(answer)
+  else 
+    decrypt(answer)
+  end 
+end 

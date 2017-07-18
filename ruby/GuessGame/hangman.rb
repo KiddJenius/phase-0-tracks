@@ -6,7 +6,7 @@ class GuessGame
 
   def initialize(anchor)
     @anchor = anchor
-    @tries = anchor.length
+    @tries = anchor.length 
     @anchor_ary = anchor.split('')
     @new_ary = ["_"] * anchor.length
     @is_over = false
@@ -21,7 +21,7 @@ class GuessGame
     end
       
   @tries -= 1
-      if @tries == 0
+      if @tries == 0 && @new_ary.include?("_")
         @is_over = true
         puts "You lost!!"
       end
@@ -35,7 +35,7 @@ end
 
 
 puts "Player one, give me a word to start off with."
-anchor = gets.chomp
+anchor = gets.chomp.downcase
 game = GuessGame.new(anchor)
 
 while !game.is_over
@@ -45,6 +45,7 @@ while !game.is_over
   game.compare(guess_letter)
   puts "This is what it looks like so far: #{game.new_ary.join('')}"
 end
+
 
 
 
