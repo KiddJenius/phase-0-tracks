@@ -61,7 +61,6 @@ class VirusPredictor
     puts " and will spread across the state in #{speed} months.\n\n"
 
   end
-
 end
 
 #=======================================================================
