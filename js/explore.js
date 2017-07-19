@@ -15,4 +15,3 @@ var stored = ReverseWord("unicorn")
 if (1==1) {	
 	console.log(stored);
 }
- 

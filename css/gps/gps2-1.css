@@ -1,57 +1,41 @@
+header {
+  background-color: #8ab6fc;
+  width: 80%;
+  padding: 5%;
+}
 
-h1 {
-	font-family: 'Roboto', 'Noto', sans-serif;
-	background-image: url(http://wallpaper-gallery.net/images/matrix-wallpaper-moving/matrix-wallpaper-moving-18.jpg);
-	color: white;
-	padding: 50px;
-}
-#frontbox {
-	background-color: #f2f2f2;
-	padding: 30px;
-}
 .column-1 {
   display: inline-block;
   vertical-align: top;
-  /*background-color: green;*/
   width: 45%;
-  font-family: helvetica;
-  
-  background-repeat: no-repeat;
-  background-size: 90%; 
-
+  padding-left: 2%;
 }
 
 .column-2 {
   display: inline-block;
   vertical-align: top;
-  /*background-color: blue;*/
   width: 45%;
-  font-family: helvetica;
+  padding-right: 2%;
+}
+
+footer {
+  width: 80%;
+  padding: 5%;
 }
 
 h1, h2 {
-  font-family: courier-new;
- 
+  font-family: "Helvetica", sans-serif;
 }
 
-details {
-	background-color: #f0b583;
-	border-bottom-style: solid;
-	border-bottom-width: thin;
-
+summary {
+  background-color: #d5d9e0;
+  border-bottom: 1px solid black;
 }
 
-article {
-    border-style: solid;
-    margin: 1px
+body {
+  font-family: "Helvetica", sans-serif;
+}
 
-}
-article:hover {
-	color: yellow;
-}
-article:nth-child(odd){
-	background-image: url(http://wallpapercave.com/wp/BhcQpIw.jpg);
-}
-article:nth-child(even){
-	background-image: url(http://graphicdesignjunction.com/wp-content/uploads/2013/03/wood+pattern+texture+7.jpg);
+p {
+  margin: 2px;
 }

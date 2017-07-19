@@ -46,5 +46,5 @@
 #Actually my first thought was 122 is the ASCII of z, which is correct, but it also connects that z is the ordinal integer of 122.
 ---------------------------------------------------------------------
 "How many times does the letter 'a' appear in this string?".count('a')
-=> 4
+=> 4 
 ----------------------------------------------------------------------
