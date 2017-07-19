@@ -1,3 +1,4 @@
+
 var colors = ["pink", "blue", "green", "yellow"];
 var names = ["Mr. Ed", "Secretariat", "Scout", "QD McGraw"];
 
@@ -21,3 +22,4 @@ firstUp.racetrack()
 var secondUp = new Car("Corvette", 140, true)
 console.log(secondUp)
 secondUp.racetrack()
+

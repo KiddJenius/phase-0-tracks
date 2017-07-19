@@ -1,11 +1,12 @@
-class TodoList
+
+class ToDoList
 
 	def initialize(list)
 		@list = ["do the dishes", "mow the lawn"]
 	end
 
 	def get_items
-		@list
+		@list 
 	end
 
 	def add_item(item)
@@ -14,17 +15,9 @@ class TodoList
 
 	def delete_item(item)
 		@list.delete("do the dishes")
-		@list
-	end
-
-	def get_item(index)
-		@list[index]
-	end
+	end 
 
 	def get_item(item)
 		item = @list[0]
 	end
 end
-
-
-

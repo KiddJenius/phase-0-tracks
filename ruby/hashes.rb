@@ -39,23 +39,31 @@ design_qaire = {
 
 puts design_qaire
 
-puts "Would you like to change any of your aswers? (If no changes put 'none')"
+puts "Would you like to change any of your answers? (If no changes put 'none')"
 update = gets.chomp
 if update == "none"
 	puts "Great!"
 else
-	puts "Type the key you would like to change"
+	puts "Type the key you would like to change
+	name
+	age
+	numOfChildren
+	income
+	woodType
+	artistType
+	carpet"
 	keychange = gets.chomp
 	puts "What would you like it to be?"
 	newvalue = gets.chomp
 end	
+
 case keychange
 when "name"
 	design_qaire[:name] = newvalue
 when "age"
 	design_qaire[:age] = newvalue.to_i
 when "numOfChildren"
-	design_qaire[:numOfChildren] = newvalue
+	design_qaire[:numOfChildren] = newvalue.to_i
 when "income"
 	design_qaire[:income] = newvalue.to_i
 when "woodType"
