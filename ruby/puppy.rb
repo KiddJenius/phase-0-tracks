@@ -19,3 +19,4 @@ end
 duchess = Puppies.new 
 fido = Puppies.new
 spot = Puppies.new 
+

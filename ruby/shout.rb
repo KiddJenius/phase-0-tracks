@@ -9,11 +9,11 @@
 # end
 
 # puts Shout.yell_angrily("Damn")
-# puts Shout.yell_happily("Ok everybody now ")
+# puts Shout.yell_happily("Ok everybody now:")
 
 module Shout
   def Uh_oh(bad_name)
-    puts "Get your butt over here right now #{bad_name}!!!"
+    puts "Get your butt over here right now #{bad_name}!!"
   end
 end
 
