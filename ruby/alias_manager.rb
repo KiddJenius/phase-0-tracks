@@ -13,19 +13,20 @@ swapped_name = rearranger(user_input)
 def next_vowel(name)
   name = name.split('')
   name.each do |indivLetter| 
-  if indivLetter == "a"
-    indivLetter.replace("e")
-  elsif indivLetter == "e"
-    indivLetter.replace("i")
+    if indivLetter == "a"
+      indivLetter.replace("e")
+    elsif indivLetter == "e"
+      indivLetter.replace("i")
   elsif indivLetter == "i"
-    indivLetter.replace("o")
+      indivLetter.replace("o")
   elsif indivLetter == "o"
-    indivLetter.replace("u")
+      indivLetter.replace("u")
   elsif indivLetter == "u"
-    indivLetter.replace("a")
+      indivLetter.replace("a")
+    end
   end
 end
-end
+
 
 #runs next vowel and stores as array
 vowel_changed_array = next_vowel(swapped_name)
@@ -36,16 +37,16 @@ vowel_string = vowel_changed_array.join('')
 def next_consonant(product)
   spot = 0 
   consonants = "bcdfghjklmnpqrstvwxyz"
-  while spot < (product.length)
-  if product[spot] == "z"
-    product[spot] = "b"
-  elsif consonants.split('').include?(product[spot])
-    next_spot = consonants.index(product[spot]) + 1 
-    product[spot] = consonants[next_spot]
+  while spot < product.length
+    if product[spot] == "z"
+      product[spot] = "b"
+    elsif consonants.split('').include?(product[spot])
+      next_spot = consonants.index(product[spot]) + 1 
+      product[spot] = consonants[next_spot]
+    end
+    spot += 1 
   end
-  spot += 1 
-end
-product
+  product
 end
 next_consonant(vowel_string)
 
