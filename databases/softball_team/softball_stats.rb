@@ -25,8 +25,8 @@ create_player(complete_stats,"Joe Antoun", 7, 0.414, "right field", "true")
 create_player(complete_stats,"Mike Rogers", 8, 0.389, "catcher", "true")
 
 def batting_avg(complete_stats, player_name)
-	complete_stats.execute("SELECT bat_avg FROM lineup WHERE name=#{player_name}")
+	complete_stats.execute("SELECT bat_avg FROM lineup WHERE name=(?)",[player_name])
 end
 
 
-p batting_avg(complete_stats, "test")
+p batting_avg(complete_stats, "Joe Antoun")
