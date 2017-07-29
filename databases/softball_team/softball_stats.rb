@@ -24,9 +24,18 @@ end
 create_player(complete_stats,"Joe Antoun", 7, 0.414, "right field", "true")
 create_player(complete_stats,"Mike Rogers", 8, 0.389, "catcher", "true")
 
+
 def batting_avg(complete_stats, player_name)
-	complete_stats.execute("SELECT bat_avg FROM lineup WHERE name=(?)",[player_name])
+	average = complete_stats.execute("SELECT bat_avg FROM lineup WHERE name=(?)",[player_name])
+	inner_average = average[0]
+	puts "#{player_name}'s batting average is #{inner_average[0]}"
 end
 
+def position(complete_stats, player_name)
+	current_pos = complete_stats.execute("SELECT position FROM lineup WHERE name=(?)", [player_name])
+	inner_pos = current_pos[0]
+	puts "#{player_name} is playing #{inner_pos[0]}"
+end
 
-p batting_avg(complete_stats, "Joe Antoun")
+position(complete_stats, "Joe Antoun")
+
