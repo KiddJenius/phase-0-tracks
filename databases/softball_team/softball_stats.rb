@@ -37,5 +37,19 @@ def position(complete_stats, player_name)
 	puts "#{player_name} is playing #{inner_pos[0]}"
 end
 
-position(complete_stats, "Joe Antoun")
+def availability(complete_stats, player_name)
+	avail = complete_stats.execute("SELECT available FROM lineup WHERE name=(?)", [player_name])
+	inner_avail = avail[0]
+		if inner_avail[0] == "true"
+			inner_avail = "IS"
+		else inner_avail = "IS NOT"
+		end
+	puts "#{player_name} #{inner_avail} available for today's game!"
+end
+
+p availability(complete_stats, "Joe Antoun")
+
+
+
+
 
