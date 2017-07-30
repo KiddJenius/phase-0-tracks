@@ -1,7 +1,6 @@
 require 'sqlite3'
 
 complete_stats = SQLite3::Database.new("stats.db")
-# complete_stats.results_as_hash = true
 
 create_table_cmd = <<-SQL
   CREATE TABLE IF NOT EXISTS lineup(
@@ -19,10 +18,6 @@ def create_player(complete_stats, player_name, avg, field_pos, can_play)
 	complete_stats.execute("INSERT OR IGNORE INTO lineup (name, bat_avg, position, available) VALUES (?,?,?,?)", 
 	[player_name, avg, field_pos, can_play])
 end
-
-create_player(complete_stats,"Joe Antoun", 0.414, "right field", "true")
-# create_player(complete_stats,"Mike Rogers", 0.389, "catcher", "true")
-
 
 def batting_avg(complete_stats, player_name)
 	average = complete_stats.execute("SELECT bat_avg FROM lineup WHERE name=(?)",[player_name])
