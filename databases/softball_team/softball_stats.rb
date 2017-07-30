@@ -8,7 +8,6 @@ create_table_cmd = <<-SQL
     id INTEGER PRIMARY KEY,
     name VARCHAR(255)UNIQUE,
     bat_order INT,
-    bat_avg INT,
     position VARCHAR(255),
     available BOOLEAN
   )
@@ -21,8 +20,8 @@ def create_player(complete_stats, player_name, order, avg, field_pos, can_play)
 	[player_name, order, avg, field_pos, can_play])
 end
 
-create_player(complete_stats,"Joe Antoun", 7, 0.414, "right field", "true")
-create_player(complete_stats,"Mike Rogers", 8, 0.389, "catcher", "true")
+# create_player(complete_stats,"Joe Antoun", 0.414, "right field", "true")
+# create_player(complete_stats,"Mike Rogers", 0.389, "catcher", "true")
 
 
 def batting_avg(complete_stats, player_name)
@@ -47,7 +46,9 @@ def availability(complete_stats, player_name)
 	puts "#{player_name} #{inner_avail} available for today's game!"
 end
 
-p availability(complete_stats, "Joe Antoun")
+
+
+
 
 
 
