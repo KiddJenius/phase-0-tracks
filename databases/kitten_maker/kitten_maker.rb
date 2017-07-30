@@ -28,8 +28,8 @@ db.execute(create_table_cmd)
 # add LOOOOTS of kittens!
 # so. many. kittens. 
 #KittenExplosion
-def create_kitten(db, name, age)
-  db.execute("INSERT INTO kittens (name, age) VALUES (?, ?)", [name, age])
+def create_kitten(db, kitten_name, kitten_age)
+  db.execute("INSERT INTO kittens (name, age) VALUES (?, ?)", [kitten_name, kitten_age])
 end
 
 10000.times do
