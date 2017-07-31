@@ -1,0 +1,5 @@
+A philosophy is commonly described with a series of brief rules or tenets.  The design philosophy of Linux is basically all the power to execute commands is in the users hands.  It's a direct descendant of the Unix sytem.  It also uses plain text as a philosophy, as opposed to binary files. 
+
+VPS is a chunk of memory boxed off somewhere that can act like a computer.  Some advantages is that you can create it in an innummerable different ways to provide you with the functionality you're looking for.  Also, you control the ports, which makes you the gatekeeper of traffic.  G'head, play God. 
+
+Running programs as the root user in a Linux system is bc of what we learned in the philosophy:  users have all the power to execute commands--unchecked.  If you blow up the root or get infected with any malicious software, there is no way to recover or quarentine the problem.   
