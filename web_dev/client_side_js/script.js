@@ -10,3 +10,7 @@ for (var i = 0; i < subheads.length; i++) {
 	element.style.fontStyle = "italic";
 
 }
+
+headline.onclick = function() {
+	console.log('ya did it!!');
+}
