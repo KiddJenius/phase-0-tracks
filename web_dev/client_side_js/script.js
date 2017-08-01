@@ -1,1 +1,4 @@
-console.log("The script is RUNNING!");
+var headline = document.getElementById( "headline" );
+console.log(headline);
+headline.style.backgroundColor = "lightblue";
+
