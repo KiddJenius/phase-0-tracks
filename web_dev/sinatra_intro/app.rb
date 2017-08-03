@@ -17,7 +17,7 @@ end
 
 # write a GET route with
 # route parameters
-get '/about/:person' do
+get '/about' do
   person = params[:person]
   "#{person} is a programmer, and #{person} is learning Sinatra."
 end
@@ -26,7 +26,7 @@ get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
 end
 
-get '/great_job/:name' do 
+get '/great_job' do 
   name = params[:name]
   if name
     "Good job, #{name}!"
