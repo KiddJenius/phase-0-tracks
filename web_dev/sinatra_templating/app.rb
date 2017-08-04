@@ -14,6 +14,7 @@ get '/' do
 end
 
 get '/second' do 
+	@students = db.execute("SELECT * FROM students")
 	erb :second_home
 end
 
@@ -27,5 +28,11 @@ post '/students' do
   db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
   redirect '/'
 end
+
+# post '/campus' do
+# 	db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
+#   	redirect '/'
+# end
+
 
 # add static resources

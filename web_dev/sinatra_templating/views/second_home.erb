@@ -2,10 +2,14 @@
 <html>
 <head>
 	<title>SECOND TITLE</title>
-	
+
 </head>
 
 <body>
-PLACEHOLDER FOR THE BODY -- SECOND PAGE
+<ul>
+    <% @students.each do |student| %>
+      <li><%= student['name'] %>, <%= student['campus'] %></li>
+    <% end %>
+  </ul>
 </body>
 </html>
